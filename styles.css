@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+body,h1,p,img {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+p {
+    color: hsl(235, 18%, 26%);
+    font-size: 1em;
+}
+.sign_up {
+    display: flex;
+    flex-direction: column;
+}
+.desktop_image {
+    display: none;
+} 
+.image img {
+    width: 100%;
+}
+.content {
+    padding: 1em 3em;
+}
+h1 {
+    font-size: 2.5em;
+    margin-block: 0.5em;
+    color: hsl(234, 29%, 20%);
+}
+.list {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    gap: 0.5em;
+}
+.content > * + * {
+    margin-top: 1.5em;
+}
+.labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+}
+.labels span {
+    font-weight: 600;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5em;
+}
+input {
+    width: 100%;
+    padding: 1em;
+    margin-top: 0px;
+    border-radius: 0.5em;
+    margin-top: 0;
+    border: 1px solid hsl(235, 18%, 26%);
+}
+button {
+    font-size: 0.9em;
+    width: 100%;
+    padding: 1.3em 0.5em;
+    background-color: hsl(234, 29%, 20%);
+    color:  hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 0.5em;
+    font-weight: 600;
+    margin-top: 0.7em;
+    cursor: pointer;
+}
+button:hover {
+    background-color:hsl(4, 100%, 67%);
+}
+.success_message {
+    display: none;
+    max-width: 400px;
+    padding: 2.5em 2.8em;
+    background-color: white;
+    border-radius: 2em;
+}
+.success_message * + * {
+    margin-bottom: 0.5em;
+}
+.success_message p {
+    font-size: 1em;
+}
+
+.error {
+    background-color: hsl(4, 100%, 93%);
+    opacity: 0.7;
+    outline-color: hsl(4, 100%, 67%);
+}
+@media screen and (min-width: 600px) {
+    body {
+        height: 100vh;
+        justify-content: center;
+        background-color: hsl(235, 18%, 26%);
+    }
+    .sign_up {
+        background-color: white;
+        flex-direction: row-reverse;
+        max-width: 750px;
+        padding: 1em;
+        border-radius: 1.2em;
+    }
+    .mobile_image {
+        display: none;
+    }
+    .desktop_image {
+        display: block;
+        height: 100%;
+    }
+    .content {
+        padding-top: 3em;
+        flex-basis: 60%;
+    }
+
+
+}
